@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Muhammad Suhaib</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-page {
+            max-width: 210mm;
+            min-height: 297mm;
+            background-color: white;
+            padding: 7mm 15mm;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            line-height: 1.35;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2px;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 20pt;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .header-left p {
+            margin: 1px 0;
+            font-size: 9.5pt;
+        }
+
+        .link-blue {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        .contact-table {
+            font-size: 9.5pt;
+            line-height: 12px;
+            border-collapse: collapse;
+            margin-left: auto;
+        }
+
+        .contact-label {
+            text-align: left;
+            padding-right: 10px;
+            color: #4b5563;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        .contact-mobile {
+            padding-top: 8px;
+            color: #374151;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        hr {
+            height: 1px;
+            background-color: black;
+            border: 0;
+            margin: 15px 0;
+        }
+
+        section {
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 11pt;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+
+        .entry-container {
+            margin-bottom: 8px;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .text-small {
+            font-size: 9.5pt;
+        }
+
+        .skills-list {
+            padding-left: 25px;
+            margin: 0 0 0 4px;
+            list-style-type: disc;
+            font-size: 9.5pt;
+            line-height: 15px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: 95px 1fr;
+            margin-bottom: 4px;
+        }
+
+        .bullet-list {
+            padding-left: 30px;
+            margin: 4px 0;
+            list-style-type: circle;
+            font-size: 9.2pt;
+            line-height: 14px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 2px;
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #1d4ed8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media print {
+            body {
+                background: none !important;
+                padding: 0 !important;
+            }
+
+            .resume-page {
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+
+            .download-btn {
+                display: none !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-page">
+        <header>
+            <div class="header-left">
+                <h1 contenteditable="true" title="Edit Name" aria-label="Edit Name">MUHAMMAD SUHAIB</h1>
+                <p><a href="https://muhammedsuhaib.netlify.app/" class="link-blue" title="Portfolio Website"
+                        aria-label="Portfolio Website" contenteditable="true">muhammedsuhaib | Portfolio</a></p>
+                <p><a href="https://www.linkedin.com/in/suhaib1/" class="link-blue" title="LinkedIn Profile"
+                        aria-label="LinkedIn Profile" contenteditable="true">suhaib1 | LinkedIn</a></p>
+                <p><a href="https://github.com/MuhammedSuhaib" class="link-blue" title="GitHub Profile"
+                        aria-label="GitHub Profile" contenteditable="true">MuhammedSuhaib | GitHub</a></p>
+            </div>
+
+            <table class="contact-table">
+                <tr>
+                    <td class="contact-label" contenteditable="true" title="Contact Label" aria-label="Contact Label">
+                        Email:</td>
+                    <td class="link-blue">
+                        <a href="mailto:muhammedsuhaib@proton.me" title="Send Email"
+                            aria-label="Email muhammedsuhaib@proton.me"
+                            contenteditable="true">muhammedsuhaib@proton.me</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-label" style="padding-top: 8px;" contenteditable="true" title="Contact Label"
+                        aria-label="Contact Label">Role:</td>
+                    <td class="contact-mobile" contenteditable="true" title="Edit Role" aria-label="Edit Role">
+                        Full-Stack & AI Engineer</td>
+                </tr>
+            </table>
+        </header>
+
+        <hr aria-hidden="true">
+
+        <section>
+            <h2 contenteditable="true" title="Section Title" aria-label="Section Title">EDUCATION</h2>
+            <div class="entry-container">
+                <div class="flex-between"><span class="bold" contenteditable="true" title="Institution Name"
+                        aria-label="Institution Name"><img src="../public/giaic.jpg" alt="GIAIC Logo" style="height: 20px; vertical-align: middle; margin-right: 5px;">Governor Initiative for AI & Computing (GIAIC)</span><span
+                        contenteditable="true" title="Location" aria-label="Location">Karachi, Pakistan</span></div>
+                <div class="flex-between text-small"><span contenteditable="true" title="Degree Details"
+                        aria-label="Degree Details">Agentic AI & Cloud Computing | Class Representative (CR) | Score:
+                        96%</span><span class="bold" contenteditable="true" title="Date Range"
+                        aria-label="Date Range">2023 - Present</span></div>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between"><span class="bold" contenteditable="true" title="Institution Name"
+                        aria-label="Institution Name">SM Science College</span><span contenteditable="true"
+                        title="Location" aria-label="Location">Karachi, Pakistan</span></div>
+                <div class="flex-between text-small"><span contenteditable="true" title="Degree Details"
+                        aria-label="Degree Details">FSC (Pre-Engineering)</span><span class="bold"
+                        contenteditable="true" title="Date Range" aria-label="Date Range">2021 - 2023</span></div>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between"><span class="bold" contenteditable="true" title="Institution Name"
+                        aria-label="Institution Name">SCOSIT School</span><span contenteditable="true" title="Location"
+                        aria-label="Location">Karachi, Pakistan</span>
+                </div>
+                <div class="flex-between text-small"><span contenteditable="true" title="Degree Details"
+                        aria-label="Degree Details">Matriculation (Science) | Score: 92.35%</span><span class="bold"
+                        contenteditable="true" title="Date Range" aria-label="Date Range">2007 - 2021</span></div>
+            </div>
+        </section>
+
+        <hr aria-hidden="true">
+
+        <section>
+            <h2 contenteditable="true" title="Section Title" aria-label="Section Title">SKILLS SUMMARY</h2>
+            <ul class="skills-list" aria-label="Technical and soft skills summary">
+                <li>
+                    <div class="skill-grid"><strong title="Tech Stack" aria-label="Tech Stack"
+                            contenteditable="true">Stack:</strong><span contenteditable="true" title="Skills list"
+                            aria-label="Skills list">Next.js Expert, Python (OOP), OpenAI SDK, FastAPI, TypeScript,
+                            SQL</span></div>
+                </li>
+                <li>
+                    <div class="skill-grid"><strong title="Research Focus" aria-label="Research Focus"
+                            contenteditable="true">Research:</strong><span contenteditable="true"
+                            title="Research focus list" aria-label="Research focus list">Physical AI, Humanoids, ROS2
+                            (Future Focus), Agentic AI Architectures</span></div>
+                </li>
+                <li>
+                    <div class="skill-grid"><strong title="Tools" aria-label="Tools"
+                            contenteditable="true">Tools:</strong><span contenteditable="true" title="Tools list"
+                            aria-label="Tools list">Firebase PWA, Sanity CMS, Tailwind CSS, Docker, Neon DB</span></div>
+                </li>
+                <li>
+                    <div class="skill-grid"><strong title="Leadership" aria-label="Leadership"
+                            contenteditable="true">Leadership:</strong><span contenteditable="true"
+                            title="Leadership details" aria-label="Leadership details">CyberSquad Lead, GIAIC CR,
+                            Upcoming Computing Author</span></div>
+                </li>
+                <li>
+                    <div class="skill-grid" style="margin-bottom:0;"><strong title="Specialties"
+                            aria-label="Specialties" contenteditable="true">Specialties:</strong><span
+                            contenteditable="true" title="Specialties list" aria-label="Specialties list">RAG Systems,
+                            Scalable DevOps Architectures, UI/UX Design</span></div>
+                </li>
+            </ul>
+        </section>
+
+        <hr aria-hidden="true">
+
+        <section>
+            <h2 contenteditable="true" title="Section Title" aria-label="Section Title">WORK EXPERIENCE</h2>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Job Title" aria-label="Job Title">FULL STACK
+                        ENGINEER INTERN | EDUVO (PRODUCT)</span>
+                    <span class="bold" contenteditable="true" title="Date Range" aria-label="Date Range">Nov 2025 - Jan
+                        2026</span>
+                </div>
+                <ul class="bullet-list" aria-label="Eduvo internship details">
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Engineering scalable full-stack
+                        features using Next.js and specialized backend logic for the Eduvo ecosystem.</li>
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Leading front-end design
+                        initiatives to bridge the gap between complex logic and dynamic experiences.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Job Title" aria-label="Job Title">GEN-AI & CLOUD
+                        COMPUTING TRAINEE | GIAIC</span>
+                    <span class="bold" contenteditable="true" title="Date Range" aria-label="Date Range">Jan 2024 - Jan
+                        2025</span>
+                </div>
+                <ul class="bullet-list" aria-label="GIAIC training details">
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Serving as Class Representative
+                        (CR), managing student inquiries and technical communication for 100+ peers.</li>
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Mastering TypeScript and Next.js
+                        for high-performance AI-integrated web applications.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Job Title" aria-label="Job Title">FRONT-END INTERN
+                        | INTERN INTELLIGENCE | <a href="#" class="link-blue" title="Recognition Clip"
+                            aria-label="View Recognition Clip" contenteditable="true">CLIP</a></span>
+                    <span class="bold" contenteditable="true" title="Date Range" aria-label="Date Range">July 2025 - Aug
+                        2025</span>
+                </div>
+                <ul class="bullet-list" aria-label="Intern Intelligence details">
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Developed high-performance
+                        responsive layouts with Tailwind CSS and Next.js.</li>
+                    <li contenteditable="true" title="Job Duty" aria-label="Job Duty">Collaborated on API integration
+                        and optimized application consistency.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr aria-hidden="true">
+
+        <section>
+            <h2 contenteditable="true" title="Section Title" aria-label="Section Title">KEY PROJECTS</h2>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Project Name" aria-label="Project Name">Micro Task
+                        AI | <a href="https://console-to-cloud.netlify.app/" class="link-blue" title="View Project"
+                            aria-label="Link to project" contenteditable="true">LINK</a></span>
+                    <span class="bold" contenteditable="true" title="Project Date" aria-label="Project Date">2026</span>
+                </div>
+                <ul class="bullet-list" aria-label="Todo Application details">
+                    <li contenteditable="true" title="Project Description" aria-label="Project Description">
+                        Cloud-native, event-driven task orchestrator using Dapr, Kafka (Redpanda), and AI agents to
+                        automate micro-task decomposition and real-time reminders.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Project Name" aria-label="Project Name">Physical AI
+                        & Humanoid Robotics | <a href="https://muhammedsuhaib.github.io/SpecKit-Plus/" class="link-blue"
+                            title="View Project" aria-label="Link to project" contenteditable="true">LINK</a></span>
+                    <span class="bold" contenteditable="true" title="Project Date" aria-label="Project Date">2025</span>
+                </div>
+                <ul class="bullet-list" aria-label="Physical AI details">
+                    <li contenteditable="true" title="Project Description" aria-label="Project Description">Interactive
+                        textbook featuring a RAG chatbot, Qdrant vector database, and Matrix-themed UI.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Project Name" aria-label="Project Name">ShortifyAI
+                        | <a href="#" class="link-blue" title="Product Link" aria-label="Link to project"
+                            contenteditable="true">PRODUCT</a></span>
+                    <span class="bold" contenteditable="true" title="Project Date" aria-label="Project Date">2025</span>
+                </div>
+                <ul class="bullet-list" aria-label="ShortifyAI details">
+                    <li contenteditable="true" title="Project Description" aria-label="Project Description">AI-driven
+                        content summarization platform designed for efficient knowledge processing.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small">
+                    <span class="bold" contenteditable="true" title="Project Name" aria-label="Project Name">Hektoo
+                        E-commerce Marketplace | <a href="https://muhammedsuhaibhackathon2.vercel.app/"
+                            class="link-blue" title="View Project" aria-label="Link to project"
+                            contenteditable="true">LINK</a></span>
+                    <span class="bold" contenteditable="true" title="Project Date" aria-label="Project Date">2024</span>
+                </div>
+                <ul class="bullet-list" aria-label="Hektoo project details">
+                    <li contenteditable="true" title="Project Description" aria-label="Project Description">Full-stack
+                        platform using Next.js and Sanity CMS with buyer satisfaction features.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr aria-hidden="true">
+
+        <section>
+            <h2 contenteditable="true" title="Section Title" aria-label="Section Title">CERTIFICATES & ACHIEVEMENTS</h2>
+            <div class="entry-container">
+                <div class="flex-between text-small"><span class="bold" contenteditable="true" title="Certificate Name"
+                        aria-label="Certificate Name"><img src="../public/internintelligence.png" height="15" alt="Intern Intelligence Logo" style="background-color: #000; border-radius: 1px; vertical-align: middle; margin-right: 10px;" title="Intern Intelligence Logo" aria-label="Intern Intelligence Logo">Front-End Internship (Intern Intelligence)</span><span
+                        class="bold" contenteditable="true" title="Certificate Date"
+                        aria-label="Certificate Date">2025</span>
+                </div>
+                <ul class="bullet-list" aria-label="Intern Intelligence certificate">
+                    <li contenteditable="true" title="Achievement Detail" aria-label="Achievement Detail">Successfully
+                        completed specialized front-end training with a focus on UI/UX and React state management.</li>
+                </ul>
+            </div>
+            <div class="entry-container">
+                <div class="flex-between text-small"><span class="bold" contenteditable="true" title="Certificate Name"
+                        aria-label="Certificate Name"><img src="../public/digiskills.png" alt="DigiSkills Logo" style="height: 20px; vertical-align: middle; margin-right: 5px; background: #000; border-radius: 2px;">Freelancing & Graphic Designing (DigiSkills)</span><span
+                        class="bold" contenteditable="true" title="Certificate Date"
+                        aria-label="Certificate Date">2021</span>
+                </div>
+                <ul class="bullet-list" aria-label="DigiSkills details">
+                    <li contenteditable="true" title="Achievement Detail" aria-label="Achievement Detail">Mastered
+                        professional digital asset creation in Photoshop and successfully navigated freelance market
+                        platforms</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <button class="download-btn" onclick="window.print()" title="Download PDF" aria-label="Download PDF">Download
+        PDF</button>
+
+</body>
+
+</html>
