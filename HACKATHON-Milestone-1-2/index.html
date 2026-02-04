@@ -5,176 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plain Resume</title>
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
       .dark {
-        background-color: #333;
+        background-color: #161515;
         color: #f0f0f0;
+      }
+      .section-blue {
+        border-radius: 0.5rem;
+        background-color: #60a5fa;
+        padding: 1.25rem;
+        margin: 1.75rem;
+        color: #fff;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        color: #e0f2fe;
+        font-weight: 800;
+        margin: 0 0 1.25rem 0;
+      }
+      .flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .link-white {
+        color: #e0f2fe;
+        text-decoration: underline;
+      }
+      .btn-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        padding: 5px 10px;
+        cursor: pointer;
       }
     </style>
   </head>
 
-  <body>
+  <body class="dark">
     <header style="display: flex; flex-direction: column; padding: 1rem">
-      <div style="font-size: 4rem; color: #4f46e5">
-        <h1 style="font-weight: 600; font-size: 120%; text-align: center">
+      <div style="color: #4f46e5">
+        <h1 style="font-weight: 600; font-size: 4rem; text-align: center; margin: 0;">
           MUHAMMAD SUHAIB
         </h1>
       </div>
-      <p style="font-size: 1.875rem; text-align: center">
+      <p style="font-size: 1.875rem; text-align: center; margin-top: 0.5rem;">
         Full-Stack & AI Engineer | Karachi, Pakistan
       </p>
     </header>
 
-    <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem 0;
-      "
-    >
+    <div style="display: flex; justify-content: center; align-items: center; margin: 1rem 0;">
       <img
         src="../public/pic.jpg"
         alt="Profile Picture"
         width="200"
         height="200"
-        style="border-radius: 9999px"
+        style="border-radius: 9999px; border: 4px solid #4f46e5;"
       />
     </div>
 
-    <section
-      style="
-        border-radius: 0.5rem;
-        background-color: #60a5fa;
-        padding: 1.25rem;
-        margin: 1.75rem;
-      "
-    >
-      <h2
-        style="
-          font-size: 2.5rem;
-          color: #e0f2fe;
-          font-weight: 800;
-          margin: 1.25rem 0;
-        "
-      >
-        About Me
-      </h2>
-      <p style="text-align: center; font-size: 1.125rem">
-        "Experienced Full-Stack & AI Engineer with expertise in Next.js, TypeScript, Python, OpenAI SDK, and cloud technologies. Passionate about creating innovative solutions using AI, physical computing, and scalable architectures. Currently serving as Class Representative at GIAIC, leading technical initiatives and mentoring peers."
+    <section class="section-blue">
+      <h2 class="section-title">About Me</h2>
+      <p style="text-align: justify; font-size: 1.125rem; margin: 0;">
+        Experienced Full-Stack & AI Engineer with expertise in Next.js, TypeScript, Python, OpenAI SDK, and cloud technologies. Passionate about creating innovative solutions using AI, physical computing, and scalable architectures. Currently serving as Class Representative at GIAIC, leading technical initiatives and mentoring peers.
       </p>
     </section>
 
-    <section
-      style="
-        border-radius: 0.5rem;
-        background-color: #60a5fa;
-        padding: 1rem;
-        margin: 1.75rem;
-      "
-    >
-      <h2
-        style="
-          font-size: 2.5rem;
-          color: #e0f2fe;
-          font-weight: 800;
-          margin: 1.25rem 0;
-        "
-      >
-        Contact Information
-      </h2>
-      <p style="font-size: 1.125rem">
-        Email:
-        <a href="mailto:muhammedsuhaib@proton.me" style="color: #e0f2fe">muhammedsuhaib@proton.me</a>
+    <section class="section-blue">
+      <h2 class="section-title">Contact Information</h2>
+      <p style="font-size: 1.125rem; margin: 0.5rem 0;">
+        Email: <a href="mailto:muhammedsuhaib@proton.me" class="link-white" title="Email Suhaib" aria-label="Email">muhammedsuhaib@proton.me</a>
       </p>
-      <p style="font-size: 1.125rem">
+      <p style="font-size: 1.125rem; margin: 0.5rem 0;">
         Phone: +923390753311
       </p>
-      <p style="font-size: 1.125rem">
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/suhaib1/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="color: #e0f2fe"
-          >suhaib1 | LinkedIn</a>
+      <p style="font-size: 1.125rem; margin: 0.5rem 0;">
+        LinkedIn: <a href="https://www.linkedin.com/in/suhaib1/" target="_blank" rel="noopener noreferrer" class="link-white" title="LinkedIn Profile" aria-label="LinkedIn">suhaib1 | LinkedIn</a>
       </p>
     </section>
 
-    <div style="display: flex; justify-content: space-between; margin: 1.75rem">
-      <section
-        style="
-          border-radius: 0.5rem;
-          background-color: #60a5fa;
-          padding: 1rem;
-          width: 100%;
-          margin-right: 2.25rem;
-        "
-      >
-        <h2
-          style="
-            font-size: 2.5rem;
-            color: #e0f2fe;
-            font-weight: 800;
-            margin: 1.25rem 0;
-          "
-        >
-          Skills Summary
-        </h2>
-        <ul style="font-weight: 600">
+    <div style="display: flex; flex-wrap: wrap; margin: 0.875rem;">
+      <section class="section-blue" style="flex: 1; min-width: 300px;">
+        <h2 class="section-title">Skills Summary</h2>
+        <ul style="font-weight: 600; line-height: 1.8;">
           <li>Stack: Next.js Expert, Python (OOP), OpenAI SDK, FastAPI, TypeScript, SQL</li>
-          <li>Research: Physical AI, Humanoids, ROS2 (Future Focus), Agentic AI Architectures</li>
+          <li>Research: Physical AI, Humanoids, ROS2, Agentic AI Architectures</li>
           <li>Tools: Firebase PWA, Sanity CMS, Tailwind CSS, Docker, Neon DB</li>
           <li>Leadership: CyberSquad Lead, GIAIC CR, Upcoming Computing Author</li>
           <li>Specialties: RAG Systems, Scalable DevOps Architectures, UI/UX Design</li>
         </ul>
       </section>
 
-      <section
-        style="
-          border-radius: 0.5rem;
-          background-color: #60a5fa;
-          padding: 1rem;
-          width: 100%;
-        "
-      >
-        <h2
-          style="
-            font-size: 2.5rem;
-            color: #e0f2fe;
-            font-weight: 800;
-            margin: 1.25rem 0;
-          "
-        >
-          Education
-        </h2>
-        <div style="margin-bottom: 8px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-weight: bold;">
-              Governor Initiative for AI & Computing (GIAIC)
-            </span>
+      <section class="section-blue" style="flex: 1; min-width: 300px;">
+        <h2 class="section-title">Education</h2>
+        <div style="margin-bottom: 15px;">
+          <div class="flex-between">
+            <span style="font-weight: bold;">GIAIC</span>
             <span>Karachi, Pakistan</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 9.5pt;">
-            <span>Agentic AI & Cloud Computing | Class Representative (CR) | Score: 96%</span>
+          <div class="flex-between" style="font-size: 10pt; margin-top: 4px;">
+            <span>Agentic AI & Cloud Computing | CR | Score: 96%</span>
             <span style="font-weight: bold;">2023 - Present</span>
           </div>
         </div>
-        <div style="margin-bottom: 8px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <div style="margin-bottom: 15px;">
+          <div class="flex-between">
             <span style="font-weight: bold;">SM Science College</span>
             <span>Karachi, Pakistan</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 9.5pt;">
+          <div class="flex-between" style="font-size: 10pt; margin-top: 4px;">
             <span>FSC (Pre-Engineering)</span>
             <span style="font-weight: bold;">2021 - 2023</span>
           </div>
         </div>
-        <div style="margin-bottom: 8px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <div style="margin-bottom: 15px;">
+          <div class="flex-between">
             <span style="font-weight: bold;">SCOSIT School</span>
             <span>Karachi, Pakistan</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 9.5pt;">
+          <div class="flex-between" style="font-size: 10pt; margin-top: 4px;">
             <span>Matriculation (Science) | Score: 92.35%</span>
             <span style="font-weight: bold;">2007 - 2021</span>
           </div>
@@ -182,60 +135,41 @@
       </section>
     </div>
 
-    <section
-      style="
-        border-radius: 0.5rem;
-        background-color: #60a5fa;
-        padding: 1rem;
-        margin: 1.75rem;
-      "
-    >
-      <h2
-        style="
-          font-size: 2.5rem;
-          color: #e0f2fe;
-          font-weight: 800;
-          margin: 1.25rem 0;
-        "
-      >
-        Work Experience
-      </h2>
-      <div style="margin-bottom: 8px;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-weight: bold;">FULL STACK ENGINEER INTERN | EDUVO (PRODUCT)</span>
+    <section class="section-blue">
+      <h2 class="section-title">Work Experience</h2>
+      <div style="margin-bottom: 12px;">
+        <div class="flex-between">
+          <span style="font-weight: bold; text-transform: uppercase;">Full Stack Engineer Intern | Eduvo (Product)</span>
           <span style="font-weight: bold;">Nov 2025 - Jan 2026</span>
         </div>
       </div>
-      <div style="margin-bottom: 8px;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-weight: bold;">GEN-AI & CLOUD COMPUTING TRAINEE | GIAIC</span>
+      <div style="margin-bottom: 12px;">
+        <div class="flex-between">
+          <span style="font-weight: bold; text-transform: uppercase;">Gen-AI & Cloud Computing Trainee | GIAIC</span>
           <span style="font-weight: bold;">Jan 2024 - Jan 2025</span>
         </div>
       </div>
-      <div style="margin-bottom: 8px;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-weight: bold;">FRONT-END INTERN | INTERN INTELLIGENCE | CLIP</span>
+      <div style="margin-bottom: 12px;">
+        <div class="flex-between">
+          <span style="font-weight: bold; text-transform: uppercase;">Front-End Intern | Intern Intelligence | Clip</span>
           <span style="font-weight: bold;">July 2025 - Aug 2025</span>
         </div>
       </div>
     </section>
 
-    <footer style="text-align: center; font-size: 1.125rem">
+    <footer style="text-align: center; font-size: 1.125rem; padding-bottom: 2rem;">
       Find me on
-      <a
-        href="https://www.linkedin.com/in/suhaib1/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="color: #60a5fa"
-        >LinkedIn</a
-      >
+      <a href="https://www.linkedin.com/in/suhaib1/" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: bold; text-decoration: none;">LinkedIn</a>
     </footer>
 
-    <button
-      onclick="toggleDarkMode()"
-      style="position: fixed; top: 1rem; right: 1rem">
-      Dark Mode
+    <button class="btn-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
+      Toggle Theme
     </button>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
   </body>
-  <script src="main.js"></script>
 </html>
