@@ -21,7 +21,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    align-items: center; /* Center-align for better mobile look */
+    align-items: center;
 }
 
 header div h1 {
@@ -39,7 +39,7 @@ header p {
 
 .profile-section {
     display: flex;
-    flex-direction: column; /* Stack items on small screens */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
@@ -47,11 +47,11 @@ header p {
 
 .profile-section img {
     border-radius: 9999px;
-    max-width: 100%; /* Ensure image doesn't overflow on small screens */
+    max-width: 100%;
 }
 
 /* Sections */
-.about-me, .contact-info, .skills-education section, .experience {
+.about-me, .contact-info, .skills-education section, .experience, .certificates {
     border-radius: 0.5rem;
     background-color: #5a9df0;
     padding: 1.25rem;
@@ -59,7 +59,7 @@ header p {
     box-shadow: 0px 4px 10px rgba(128, 0, 128, 0.5);
 }
 
-.about-me h2, .contact-info h2, .skills-education h2, .experience h2 {
+.about-me h2, .contact-info h2, .skills-education h2, .experience h2, .certificates h2 {
     font-size: 2.5rem;
     color: #e0f2fe;
     font-weight: 800;
@@ -69,27 +69,46 @@ header p {
 /* Skills and Education section */
 .skills-education {
     display: flex;
-    flex-direction: row; /* Side-by-side on larger screens */
+    flex-direction: row;
     justify-content: space-between;
-    gap: 1rem; /* Add spacing between sections */
-    margin: 1.75rem;
+    gap: 1rem;
+    margin: 0; /* Fixed margin to prevent double spacing */
 }
 
 .skills-education section {
-    background-color: #5a9df0;
-    padding: 1rem;
-    flex: 1; /* Make each section take equal space */
+    flex: 1;
 }
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.bold { font-weight: bold; }
+.text-small { font-size: 1rem; }
+.entry-container { margin-bottom: 10px; }
 
 footer {
     text-align: center;
     font-size: 1.125rem;
+    padding: 2rem 0;
 }
 
 /* Buttons */
 button {
     position: fixed;
     top: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
+    z-index: 999;
 }
 
 button:first-of-type {
@@ -97,7 +116,12 @@ button:first-of-type {
 }
 
 button:last-of-type {
-    right: 6rem;
+    right: 12rem;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    transform: scale(1.05);
 }
 
 /* Responsive Design */
@@ -107,7 +131,7 @@ button:last-of-type {
     }
 
     header div h1 {
-        font-size: 2rem; /* Smaller font size on mobile */
+        font-size: 2.5rem;
     }
 
     header p {
@@ -115,7 +139,7 @@ button:last-of-type {
     }
 
     .skills-education {
-        flex-direction: column; /* Stack skills and education vertically */
+        flex-direction: column;
     }
 
     .about-me, .contact-info, .skills-education section, .experience {
@@ -125,7 +149,7 @@ button:last-of-type {
 
     button {
         position: static;
-        margin-top: 1rem;
+        margin: 1rem auto;
         display: block;
     }
 }
