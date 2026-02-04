@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Integration</title>
+    <style>
+        /* Chatbot container styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .chatbot-window {
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 10px;
+            display: none;
+            position: relative;
+        }
+
+        .chatbot-open {
+            display: block;
+        }
+
+        .chatbot-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .chatbot-toggle {
+            background-color: #1d4ed8;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-toggle:hover {
+            background-color: #1e40af;
+            transform: scale(1.05);
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border-radius: 10px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e5e7eb;
+            border-top: 4px solid #1d4ed8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div id="chatbotWindow" class="chatbot-window">
+            <div id="loadingOverlay" class="loading-overlay">
+                <div class="spinner"></div>
+                <div class="loading-text">Loading AI Assistant...</div>
+            </div>
+            <iframe
+                id="chatbotFrame"
+                class="chatbot-iframe"
+                src="https://muhammedsuhaib-giaiclinkedinposts.hf.space/"
+                title="AI Assistant Chatbot"
+                allow="microphone; camera"
+            ></iframe>
+        </div>
+        <button id="chatbotToggle" class="chatbot-toggle" title="Open AI Assistant">
+            💬
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotFrame = document.getElementById('chatbotFrame');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+
+            // Toggle chatbot window
+            chatbotToggle.addEventListener('click', function() {
+                chatbotWindow.classList.toggle('chatbot-open');
+
+                // If opening and hasn't loaded yet, show loading
+                if (chatbotWindow.classList.contains('chatbot-open')) {
+                    loadingOverlay.style.display = 'flex';
+                }
+            });
+
+            // Handle iframe load
+            chatbotFrame.addEventListener('load', function() {
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 1000); // Small delay to ensure content is loaded
+            });
+
+            // Close chatbot when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideChatbot = chatbotWindow.contains(event.target) || chatbotToggle.contains(event.target);
+
+                if (!isClickInsideChatbot && chatbotWindow.classList.contains('chatbot-open')) {
+                    chatbotWindow.classList.remove('chatbot-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
